@@ -101,7 +101,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Software Defect Prediction Dashboard",
-    tagline: "Undergraduate research · interpretable ML",
+    tagline: "🎓 Final Year Project · Interpretable ML research",
     description:
       "A proactive Software Defect Prediction system using the TabNet deep learning architecture on the NASA CM1 benchmark dataset. Applied SMOTE to balance 562 clean vs 43 defective modules, leveraged TabNet's sequential attention for native feature selection, and achieved 95% recall (F1: 0.6032). The live dashboard translates model attention weights into actionable Z-score deviations.",
     tags: ["TabNet", "Deep Learning", "SMOTE", "Python", "Interpretable ML", "Research"],
@@ -126,6 +126,7 @@ export const projects: Project[] = [
     description:
       "Built for the Build with Gemma: GenAI for SDGs Hackathon — an offline-capable, multimodal AI triage assistant for rural clinics. Uses Gemma's multimodal reasoning and native function-calling to return condition/urgency assessments, safe medication dosages, and danger-sign alerts, translated into Yoruba for community health workers — directly addressing UN SDG 3.",
     tags: ["Gemma 4", "Multimodal AI", "Function Calling", "Digital Health", "TypeScript"],
+    demo: "https://mamacare-triage.onrender.com/",
     source: "https://github.com/Devtec-3/MamaCare-Triage",
     featured: true,
     icon: "🩺",
@@ -175,6 +176,62 @@ export const projects: Project[] = [
       "A school portal and website built for a real client — handling the institution's online presence and portal experience.",
     tags: ["TypeScript", "React", "Client Work"],
     icon: "🏫",
+  },
+  {
+    title: "Dehelar",
+    tagline: "Full-stack TypeScript web application",
+    description:
+      "A full-stack web application built with TypeScript and deployed on both Vercel and Render.",
+    tags: ["TypeScript", "Full-stack", "Web App"],
+    demo: "https://dehelar.onrender.com/",
+    source: "https://github.com/Devtec-3/Dehelar",
+    icon: "🛍️",
+  },
+  {
+    title: "Cosmetic Beauty Salon",
+    tagline: "Client project · salon website",
+    description:
+      "A polished beauty salon website for a real client — service showcase, booking-oriented layout and responsive design.",
+    tags: ["HTML", "CSS", "JavaScript", "Client Work"],
+    demo: "https://cosmetic-beauty-salon-web.vercel.app/",
+    source: "https://github.com/Devtec-3/Cosmetic-Beauty-Salon-Web",
+    icon: "💅",
+  },
+  {
+    title: "Fitness Web App",
+    tagline: "Personal fitness tracker",
+    description:
+      "A web application for tracking workouts and fitness activity with a clean, responsive interface.",
+    tags: ["TypeScript", "React", "Health"],
+    source: "https://github.com/Devtec-3/Fitness-webApp",
+    icon: "💪",
+  },
+  {
+    title: "Docu-Wise AI",
+    tagline: "AI document assistant",
+    description:
+      "An AI-powered tool for working with documents — parsing, summarising and answering questions from document content.",
+    tags: ["TypeScript", "AI", "Documents"],
+    source: "https://github.com/Devtec-3/Docu-Wise-AI",
+    icon: "📄",
+  },
+  {
+    title: "Angular E-commerce",
+    tagline: "E-commerce storefront",
+    description:
+      "A full e-commerce frontend built with Angular — product listings, cart flow and checkout experience.",
+    tags: ["Angular", "TypeScript", "E-commerce"],
+    source: "https://github.com/Devtec-3/Angular-ecommerce",
+    icon: "🛒",
+  },
+  {
+    title: "Resume Builder",
+    tagline: "Vanilla JS resume generator",
+    description:
+      "A resume builder written in vanilla JavaScript — live-preview CV creation with printable output.",
+    tags: ["JavaScript", "HTML", "CSS"],
+    source: "https://github.com/Devtec-3/resume-builder-using-vanilla-javascript",
+    icon: "📝",
   },
   {
     title: "Black Diamond Menu",

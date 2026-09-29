@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-🌐 **Live:** [your-portfolio.vercel.app](https://vercel.com/new) <!-- ← update after Vercel deploy -->
+🌐 **Live:** [devtec-portfolio.vercel.app](https://vercel.com/new) <!-- ← update after Vercel deploy -->
 📄 **CV:** [resume.pdf](public/resume.pdf)
 
 ---
@@ -44,11 +44,14 @@ defect prediction.
 
 | Project | What it does | Links |
 |---|---|---|
-| 🔬 **Software Defect Prediction** | TabNet deep learning on NASA CM1 dataset — 95% recall, live dashboard translating attention weights into Z-score deviations | [Live ↗](https://software-def.onrender.com) |
+| 🔬 **Software Defect Prediction** ⭐ *Final Year Project* | TabNet deep learning on NASA CM1 dataset — 95% recall, live dashboard translating attention weights into Z-score deviations | [Live ↗](https://software-def.onrender.com) |
 | 🌾 **CropDx** | Field-first crop disease detection for farmers — classical ML pipeline (HSV/GLCM/OpenCV + RBF SVM), 10-language voice guide for low-connectivity regions | [Live ↗](https://devtec-3.github.io/Crop-disease-detectors/) · [Code ↗](https://github.com/Devtec-3/Crop-disease-detectors) |
-| 🩺 **MamaCare Triage** | Offline-capable multimodal AI triage for rural clinics (Gemma function-calling), Yoruba-language outputs — UN SDG 3 | [Code ↗](https://github.com/Devtec-3/MamaCare-Triage) |
+| 🩺 **MamaCare Triage** | Offline-capable multimodal AI triage for rural clinics (Gemma function-calling), Yoruba-language outputs — UN SDG 3 | [Live ↗](https://mamacare-triage.onrender.com/) · [Code ↗](https://github.com/Devtec-3/MamaCare-Triage) |
 | 🧠 **GlobalCoach AI** | AI career orchestration platform — Gemini 1.5 Flash semantic job matching, PostgreSQL + Drizzle ORM, analytics dashboard | [Code ↗](https://github.com/Devtec-3/GlobalCoachAI) |
 | 🚀 **CareerPilot** | AI career assistant — ATS CV review, roadmaps, interview prep | [Live ↗](https://my-fintech-app.onrender.com/) · [Code ↗](https://github.com/Devtec-3/CareerPilot) |
+| 🛍️ **Dehelar** | Full-stack TypeScript web application deployed on Vercel & Render | [Live ↗](https://dehelar.onrender.com/) · [Code ↗](https://github.com/Devtec-3/Dehelar) |
+| 💇 **Cosmetic Beauty Salon** | Client project — salon website with service showcase & booking-oriented layout | [Live ↗](https://cosmetic-beauty-salon-web.vercel.app/) · [Code ↗](https://github.com/Devtec-3/Cosmetic-Beauty-Salon-Web) |
+| 🍽️ **Black Diamond Menu** | Client project — full-stack digital restaurant menu with API service | [Live ↗](https://black-diamond-menu-website-api-serv.vercel.app/) · [Code ↗](https://github.com/Devtec-3/Black-Diamond-Menu-Website) |
 
 ---
 
@@ -69,9 +72,10 @@ defect prediction.
 - 🏠 **Hero** — identity, photo, CTAs + stats band (CGPA · hackathon · countries · repos)
 - 👤 **About** — bio, education, coursework, quick facts
 - 🛠️ **Skills** — languages, frameworks, ML/AI, data & tools
-- 💼 **Projects** — featured case studies + other notable work
+- 💼 **Projects** — featured case studies (incl. final year project) + other notable work
 - 🔬 **Research** — interests + research experience timeline
 - 🏢 **Experience** — Pacific Artis (AU), BitsPro (UK), SystemSpecs/Remita (NG), Trayce + teaching
+- 💬 **Testimonials** — LinkedIn recommendations
 - ⭐ **Leadership** — NACOS Chairman, Kectil Fellow, Aspire Leader, community work
 - ✉️ **Contact** — email + GitHub, LinkedIn, X, Instagram, Facebook
 
@@ -81,8 +85,8 @@ defect prediction.
 
 ```bash
 # 1. Clone
-git clone https://github.com/Devtec-3/portfolio.git
-cd portfolio
+git clone https://github.com/Devtec-3/devtec-portfolio.git
+cd devtec-portfolio
 
 # 2. Install
 npm install
@@ -105,7 +109,7 @@ npm run start   # serve production build
 ## 🧱 Project Structure
 
 ```
-portfolio/
+devtec-portfolio/
 ├── app/
 │   ├── layout.tsx      # Root layout + SEO metadata
 │   ├── page.tsx        # Section assembly
