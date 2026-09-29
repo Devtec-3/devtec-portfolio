@@ -292,11 +292,36 @@ export const achievements = [
   "🔬 Live ML research dashboard deployed — 95% recall defect prediction model",
 ];
 
+export const testimonials = [
+  // ✏️ PASTE YOUR REAL LINKEDIN RECOMMENDATIONS HERE
+  // Copy the recommendation text + the person's name and title from:
+  // LinkedIn → your profile → Recommendations → Received
+  {
+    quote:
+      "Paste your first LinkedIn recommendation here — ideally one from a supervisor, lecturer or hackathon teammate that speaks to your engineering skill and work ethic.",
+    name: "Recommendation 1",
+    title: "e.g. Project Supervisor · KWASU",
+  },
+  {
+    quote:
+      "Paste your second LinkedIn recommendation here — one from an internship mentor or client works great for credibility.",
+    name: "Recommendation 2",
+    title: "e.g. Mentor · BitsPro Consulting",
+  },
+  {
+    quote:
+      "Paste a third recommendation here — two or three strong ones are better than five weak ones.",
+    name: "Recommendation 3",
+    title: "e.g. Hackathon Teammate · Aspire × Cayu",
+  },
+];
+
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Research", href: "#research" },
   { label: "Experience", href: "#experience" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
