@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Story from "@/components/Story";
+import StoryTeaser from "@/components/StoryTeaser";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -15,7 +15,7 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
-      <Story />
+      <StoryTeaser />
       <About />
       <Skills />
       <Projects />

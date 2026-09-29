@@ -11,9 +11,9 @@ export default function Skills() {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {Object.entries(skills).map(([group, items], i) => (
-          <Reveal key={group} delay={i * 90}>
+          <Reveal key={group} delay={i * 90} variant="sticker-pop">
             <div
-              className={`sticky h-full font-body ${
+              className={`sticky sticky-wobble h-full font-body ${
                 ["#f9e79f", "#fad7a0", "#d5e8d4", "#e8d4f0"][i % 4]
               }`}
               style={{ transform: `rotate(${i % 2 ? 1.5 : -1.5}deg)` }}

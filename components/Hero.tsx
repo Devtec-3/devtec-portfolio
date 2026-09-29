@@ -9,10 +9,10 @@ export default function Hero() {
         <div className="grid items-center gap-12 md:grid-cols-[1.2fr_1fr]">
           {/* Copy */}
           <div className="animate-fade-up">
-            <p className="marked font-hand text-2xl">
+            <p className="marked marked-animate font-hand text-2xl">
               Hi, I&apos;m Abdulwadud 👋
             </p>
-            <h1 className="mt-4 font-serif2 text-4xl font-extrabold leading-[1.1] text-espresso md:text-6xl">
+            <h1 className="animate-write-in mt-4 font-serif2 text-4xl font-extrabold leading-[1.1] text-espresso md:text-6xl">
               From coding on a{" "}
               <span className="hand-underline">phone in Ilorin</span> to
               building AI that feeds, heals &amp; hires.
@@ -33,10 +33,10 @@ export default function Hero() {
           </div>
 
           {/* Polaroid photo */}
-          <Reveal delay={150}>
+          <Reveal delay={150} variant="pin-up" tilt="2deg">
             <div className="relative mx-auto w-fit md:ml-auto">
-              <div className="tape -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-3" />
-              <div className="polaroid rotate-2 transition hover:rotate-0">
+              <div className="tape -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-3 animate-tape-peel" style={{ animationDelay: "0.5s" }} />
+              <div className="polaroid rotate-2 transition hover:rotate-0 scrap-lift">
                 <Image
                   src={profile.avatar}
                   alt={profile.name}
@@ -50,7 +50,7 @@ export default function Hero() {
                 </p>
               </div>
               {/* small sticky note */}
-              <div className="sticky absolute -bottom-8 -left-10 w-36 -rotate-6 font-hand text-base leading-tight text-espresso">
+              <div className="sticky sticky-wobble absolute -bottom-8 -left-10 w-36 -rotate-6 font-hand text-base leading-tight text-espresso animate-sticker-pop" style={{ animationDelay: "1s" }}>
                 started 2022 — no laptop, no excuses 📱
               </div>
             </div>

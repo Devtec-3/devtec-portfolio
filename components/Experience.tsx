@@ -36,8 +36,8 @@ export default function Experience() {
 
         {/* Leadership & certs as sticky notes */}
         <div className="space-y-8">
-          <Reveal delay={100}>
-            <div className="sticky -rotate-1 bg-[#f9e79f]">
+          <Reveal delay={100} variant="sticker-pop">
+            <div className="sticky sticky-wobble -rotate-1 bg-[#f9e79f]">
               <p className="font-serif2 text-base font-extrabold text-espresso">
                 ⭐ Leadership &amp; Community
               </p>
@@ -48,8 +48,8 @@ export default function Experience() {
               </ul>
             </div>
           </Reveal>
-          <Reveal delay={200}>
-            <div className="sticky rotate-1 bg-[#d5e8d4]">
+          <Reveal delay={200} variant="sticker-pop">
+            <div className="sticky sticky-wobble rotate-1 bg-[#d5e8d4]">
               <p className="font-serif2 text-base font-extrabold text-espresso">
                 📜 Certifications
               </p>

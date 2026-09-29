@@ -396,7 +396,7 @@ export const testimonials = [
 ];
 
 export const navLinks = [
-  { label: "Story", href: "#story" },
+  { label: "Story", href: "/story" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },

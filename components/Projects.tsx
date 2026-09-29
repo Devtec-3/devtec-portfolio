@@ -1,7 +1,19 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 import { projects, type Project } from "@/lib/data";
+import { caseStudies } from "@/lib/case-studies";
+
+const studyByProject: Record<string, string> = {
+  "CropDx — Crop Disease Detector": "cropdx",
+  "MamaCare Triage": "mamacare",
+  "Software Defect Prediction Dashboard": "software-defect-prediction",
+  "GlobalCoach AI": "globalcoach",
+  "CareerPilot — AI Career Assistant": "careerpilot",
+};
 
 function ProjectCard({ p, large = false }: { p: Project; large?: boolean }) {
+  const studySlug = studyByProject[p.title];
+
   return (
     <div
       className={`scrap relative flex flex-col p-6 ${
@@ -32,7 +44,15 @@ function ProjectCard({ p, large = false }: { p: Project; large?: boolean }) {
         </div>
       </div>
 
-      <div className="mt-5 flex gap-4 font-hand text-xl font-bold md:mt-0 md:flex-col md:gap-2">
+      <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 font-hand text-xl font-bold md:mt-0 md:flex-col md:items-start md:gap-2">
+        {studySlug && (
+          <Link
+            href={`/projects/${studySlug}`}
+            className="rounded-full bg-espresso px-4 py-1 text-base font-bold text-paper transition hover:bg-rust"
+          >
+            read case study →
+          </Link>
+        )}
         {p.demo && (
           <a href={p.demo} target="_blank" rel="noreferrer" className="text-rust transition hover:opacity-70">
             live demo ↗
@@ -59,8 +79,8 @@ export default function Projects() {
         Projects I&apos;m proud of
       </h2>
       <p className="mt-3 max-w-2xl text-sm font-semibold text-espresso/70">
-        Including my final year project — AI with real-world impact, plus
-        client deliveries.
+        Five of these have full case studies — the problem, why I built it this
+        way, what broke, and what it taught me.
       </p>
 
       <div className="mt-12 grid gap-8 md:grid-cols-2">

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navLinks, profile } from "@/lib/data";
 
@@ -21,9 +22,9 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         {/* torn badge logo */}
-        <a href="#top" className="badge-torn bg-espresso px-5 py-2 font-serif2 text-sm font-bold italic text-paper">
+        <Link href="/" className="badge-torn bg-espresso px-5 py-2 font-serif2 text-sm font-bold italic text-paper">
           {profile.alias}
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-7 text-sm font-semibold text-espresso md:flex">
           {navLinks.map((l) => (
