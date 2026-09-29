@@ -71,6 +71,14 @@ export default function Experience() {
                 <li>Live ML research dashboard deployed</li>
                 <li>Kectil Youth Leadership Fellow · Aspire Leader</li>
               </ul>
+              <a
+                href="/Aspire-Certificate.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-1 font-hand text-lg font-bold text-rust underline decoration-marker decoration-2 underline-offset-4 transition hover:opacity-70"
+              >
+                📜 view my Aspire certificate ↗
+              </a>
             </div>
           </Reveal>
         </div>

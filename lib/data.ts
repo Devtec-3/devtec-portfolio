@@ -28,6 +28,26 @@ export const profile = {
   },
 };
 
+export const story = {
+  chapters: [
+    "My journey into technology began in 2022 — with no laptop. I learned HTML and CSS on my Redmi 10C smartphone using the Acode app, watching YouTube tutorials through split-screen mode. My first file was called first.html. What started as curiosity gradually became a passion that shaped my entire academic and professional journey.",
+    "I didn't stop at tutorials. I built real things on that phone: a full personal brand site called Muhammad web Design, a school website, a student portal, a travel site, login pages with working forms — every line of HTML, CSS and JavaScript typed on a touchscreen keyboard. The screenshots on this page are real, straight from that era.",
+    "I went on to study Computer Science at Kwara State University (KWASU), Malete, graduating in July 2026 with a Second Class Upper degree. During my studies I built a strong foundation in software engineering, artificial intelligence, databases and machine learning — and my final-year project focused on software defect prediction using TabNet and SMOTE, with an emphasis on interpretability.",
+    "Today I've grown from that beginner into a software engineer and machine learning researcher — internships at SystemSpecs and BitsPro, projects across AI, agriculture and healthcare, and research in interpretable ML. Recently I've been exploring AI for industrial reliability: FMEA, Reliability-Centered Maintenance (RCM2), predictive maintenance and digital twins. I share the journey through my brand, Devtec — because your starting point should never define your potential.",
+  ],
+  closing:
+    "My journey started with a smartphone, but my vision was always bigger than the device I wrote my first line of code on.",
+  graduationPhoto: "", // ← drop your graduation photo in /public (e.g. "/graduation.jpg") and put the filename here
+  gallery: [
+    { src: "/story/index-code.jpeg", caption: "index.html", tilt: "-rotate-1" },
+    { src: "/story/login-code.jpeg", caption: "login.html", tilt: "rotate-1" },
+    { src: "/story/login-preview.jpeg", caption: "it runs! 🎉", tilt: "-rotate-2" },
+    { src: "/story/school-site.jpeg", caption: "school website", tilt: "rotate-2" },
+    { src: "/story/portal.jpeg", caption: "student portal", tilt: "-rotate-1" },
+    { src: "/story/travel-site.jpeg", caption: "travel site", tilt: "rotate-1" },
+  ],
+};
+
 export const about = {
   paragraphs: [
     "I got into tech in 2022 — with no laptop. I coded for over a year on a small Android phone using TrebEdit, writing my first HTML on a cracked screen in Ilorin. Everything I know started there.",
@@ -372,6 +392,7 @@ export const testimonials = [
 ];
 
 export const navLinks = [
+  { label: "Story", href: "#story" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
