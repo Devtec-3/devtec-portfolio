@@ -37,7 +37,7 @@ export const story = {
   ],
   closing:
     "My journey started with a smartphone, but my vision was always bigger than the device I wrote my first line of code on.",
-  graduationPhoto: "", // ← drop your graduation photo in /public (e.g. "/graduation.jpg") and put the filename here
+  graduationPhoto: "/graduation.jpeg",
   gallery: [
     { src: "/story/index-code.jpeg", caption: "index.html", tilt: "-rotate-1" },
     { src: "/story/login-code.jpeg", caption: "login.html", tilt: "rotate-1" },
@@ -45,6 +45,10 @@ export const story = {
     { src: "/story/school-site.jpeg", caption: "school website", tilt: "rotate-2" },
     { src: "/story/portal.jpeg", caption: "student portal", tilt: "-rotate-1" },
     { src: "/story/travel-site.jpeg", caption: "travel site", tilt: "rotate-1" },
+  ],
+  graduationGallery: [
+    { src: "/graduation-2.jpeg", caption: "B.Sc. Computer Science 🎓", tilt: "rotate-2" },
+    { src: "/graduation-3.jpeg", caption: "class of 2026 ✨", tilt: "-rotate-1" },
   ],
 };
 

@@ -105,27 +105,36 @@ export default function Story() {
             <div className="relative mx-auto w-fit">
               <div className="tape -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
               <div className="polaroid -rotate-1">
-                {story.graduationPhoto ? (
-                  <Image
-                    src={story.graduationPhoto}
-                    alt="Graduation — KWASU"
-                    width={320}
-                    height={420}
-                    className="h-72 w-auto object-cover"
-                  />
-                ) : (
-                  <div className="flex h-72 w-56 flex-col items-center justify-center bg-paperdark text-center">
-                    <span className="text-5xl">🎓</span>
-                    <p className="mt-3 px-4 font-hand text-lg leading-tight text-espresso/70">
-                      graduation photo goes here — drop it in and I&apos;ll pin
-                      it up
-                    </p>
-                  </div>
-                )}
+                <Image
+                  src={story.graduationPhoto}
+                  alt="Graduation — KWASU"
+                  width={340}
+                  height={450}
+                  className="h-72 w-auto object-cover"
+                />
                 <p className="absolute bottom-2 left-0 right-0 text-center font-hand text-base text-espresso/80">
                   KWASU — July 2026 🎓
                 </p>
               </div>
+              {/* extra graduation polaroids fanned behind */}
+              {story.graduationGallery.map((g, i) => (
+                <div
+                  key={g.src}
+                  className={`polaroid absolute top-6 w-32 ${g.tilt} ${i === 0 ? "-right-24 rotate-6" : "-right-40 -rotate-3"} hidden lg:block`}
+                  style={{ zIndex: -1 - i }}
+                >
+                  <Image
+                    src={g.src}
+                    alt={g.caption}
+                    width={160}
+                    height={220}
+                    className="h-36 w-32 object-cover"
+                  />
+                  <p className="absolute bottom-1 left-0 right-0 text-center font-hand text-xs text-espresso/80">
+                    {g.caption}
+                  </p>
+                </div>
+              ))}
             </div>
             <div>
               <p className="font-hand text-2xl font-bold text-rust">
