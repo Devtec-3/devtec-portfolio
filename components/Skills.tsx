@@ -3,23 +3,29 @@ import { skills } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-pad">
-      <h2 className="mb-10 text-3xl font-bold md:text-4xl">
-        Skills &amp; <span className="gradient-text">Toolkit</span>
+    <section id="skills" className="paper-grid section-pad">
+      <p className="marked font-hand text-2xl">My Toolkit</p>
+      <h2 className="mt-2 font-serif2 text-3xl font-extrabold text-espresso md:text-5xl">
+        Skills I picked up <span className="hand-underline">along the way</span>
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {Object.entries(skills).map(([group, items], i) => (
-          <Reveal key={group} delay={i * 100}>
-            <div className="card h-full p-6">
-              <h3 className="mb-4 font-semibold text-white">{group}</h3>
-              <div className="flex flex-wrap gap-2">
+          <Reveal key={group} delay={i * 90}>
+            <div
+              className={`sticky h-full font-body ${
+                ["#f9e79f", "#fad7a0", "#d5e8d4", "#e8d4f0"][i % 4]
+              }`}
+              style={{ transform: `rotate(${i % 2 ? 1.5 : -1.5}deg)` }}
+            >
+              <p className="font-serif2 text-base font-extrabold text-espresso">
+                {group}
+              </p>
+              <ul className="mt-3 space-y-1.5 text-xs font-bold text-espresso/80">
                 {items.map((s) => (
-                  <span key={s} className="chip">
-                    {s}
-                  </span>
+                  <li key={s}>· {s}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           </Reveal>
         ))}

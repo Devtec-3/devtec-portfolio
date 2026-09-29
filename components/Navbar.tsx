@@ -16,56 +16,53 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition ${
-        scrolled ? "border-b border-line bg-ink/80 backdrop-blur" : ""
+        scrolled ? "bg-paper/95 shadow-[0_2px_14px_rgba(59,35,26,0.10)] backdrop-blur" : ""
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
-        <a href="#top" className="font-bold tracking-tight">
-          <span className="gradient-text">&lt;{profile.alias} /&gt;</span>
+        {/* torn badge logo */}
+        <a href="#top" className="badge-torn bg-espresso px-5 py-2 font-serif2 text-sm font-bold italic text-paper">
+          {profile.alias}
         </a>
 
-        <ul className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
+        <ul className="hidden items-center gap-7 text-sm font-semibold text-espresso md:flex">
           {navLinks.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="transition hover:text-accent">
+              <a href={l.href} className="transition hover:text-rust">
                 {l.label}
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#contact"
-              className="rounded-lg border border-accent/40 px-3 py-1.5 font-semibold text-accent transition hover:bg-accent/10"
-            >
-              Hire Me
-            </a>
-          </li>
         </ul>
+
+        <a href="#contact" className="btn-espresso hidden !py-2 text-xs md:inline-flex">
+          Hire Me
+        </a>
 
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen(!open)}
-          className="text-2xl md:hidden"
+          className="text-2xl text-espresso md:hidden"
         >
           {open ? "✕" : "☰"}
         </button>
       </nav>
 
       {open && (
-        <ul className="border-t border-line bg-ink/95 px-5 py-4 md:hidden">
+        <ul className="border-t border-espresso/10 bg-paper px-5 py-4 md:hidden">
           {navLinks.map((l) => (
             <li key={l.href} className="py-2">
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block text-slate-300"
+                className="block font-semibold text-espresso"
               >
                 {l.label}
               </a>
             </li>
           ))}
           <li className="pt-2">
-            <a href="#contact" onClick={() => setOpen(false)} className="btn-primary w-full justify-center text-sm">
+            <a href="#contact" onClick={() => setOpen(false)} className="btn-espresso w-full justify-center text-xs">
               Hire Me
             </a>
           </li>

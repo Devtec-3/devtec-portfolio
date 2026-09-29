@@ -11,7 +11,7 @@ export const profile = {
   phone: "+234 811 284 0602",
   avatar: "/me.jpg",
   resumeUrl: "/resume.pdf",
-  bio: "I'm a software engineer and machine learning researcher from Ilorin, Nigeria. I build AI products that solve real problems — an offline-capable maternal health triage assistant, a crop disease detector for farmers, and interpretable ML research in software defect prediction. I've completed engineering internships across Nigeria, the UK, and Australia, and I'm passionate about responsible, interpretable AI for global impact.",
+  bio: "I'm a software engineer and machine learning researcher from Ilorin, Nigeria. I build AI products that solve real problems — an offline-capable maternal health triage assistant, a crop disease detector for farmers, and interpretable ML research in software defect prediction. I've completed engineering internships across Nigeria, the UK, and Australia.",
   highlights: [
     "B.Sc. Computer Science, KWASU — CGPA 4.01/5.00 (Second Class Upper)",
     "Top 10 Global Finalist — Aspire × Cayu Global AI Hackathon",
@@ -24,16 +24,16 @@ export const profile = {
     twitter: "https://x.com/devtec_33",
     instagram: "https://www.instagram.com/devtec3",
     facebook: "https://www.facebook.com/share/19ZnxE89yg/",
-    scholar: "", // paste your Google Scholar URL here when ready
+    scholar: "",
   },
 };
 
 export const about = {
-  heading: "About Me",
   paragraphs: [
-    "I'm Muhammad Abdulwadud Ayinde — known online as Devtec — a software engineer and machine learning researcher based in Ilorin, Nigeria. I recently completed my B.Sc. in Computer Science at Kwara State University with a CGPA of 4.01/5.00 (Second Class Upper).",
-    "My work sits at the intersection of software engineering and applied AI: I've built an offline-capable maternal health triage assistant for rural clinics, a multilingual crop disease detection assistant for farmers, and AI career platforms — while my research focuses on interpretable, uncertainty-aware machine learning for software defect prediction.",
-    "I've gained industry experience across three countries — SystemSpecs (Remita) in Nigeria, BitsPro Consulting in the UK, and Pacific Artis in Australia — and I actively give back through teaching, community leadership, and mentoring.",
+    "I got into tech in 2022 — with no laptop. I coded for over a year on a small Android phone using TrebEdit, writing my first HTML on a cracked screen in Ilorin. Everything I know started there.",
+    "That gave me a starting point. Everything after came from consistency: building constantly, teaching myself, and learning through real work.",
+    "Today I'm a software engineer and machine learning researcher — I've built AI products across agriculture, healthcare and careers, completed internships in three countries, and I research interpretable machine learning at KWASU.",
+    "It feels like every line of code I typed on that phone was leading me here.",
   ],
   education: [
     {
@@ -43,7 +43,7 @@ export const about = {
     },
     {
       title: "Relevant Coursework",
-      org: "Data Structures & Algorithms · AI & Expert Systems · Software Engineering · DBMS · Operating Systems · OOP · Data Communication & Networks",
+      org: "Data Structures & Algorithms · AI & Expert Systems · Software Engineering · DBMS · Operating Systems · OOP",
       period: "",
     },
   ],
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     title: "MamaCare Triage",
     tagline: "AI health triage for rural clinics · SDG 3",
     description:
-      "Built for the Build with Gemma: GenAI for SDGs Hackathon — an offline-capable, multimodal AI triage assistant for rural clinics. Uses Gemma's multimodal reasoning and native function-calling to return condition/urgency assessments, safe medication dosages, and danger-sign alerts, translated into Yoruba for community health workers — directly addressing UN SDG 3.",
+      "Built for the Build with Gemma: GenAI for SDGs Hackathon — an offline-capable, multimodal AI triage assistant for rural clinics. Uses Gemma's multimodal reasoning and native function-calling to return condition/urgency assessments, safe medication dosages, and danger-sign alerts, translated into Yoruba for community health workers.",
     tags: ["Gemma 4", "Multimodal AI", "Function Calling", "Digital Health", "TypeScript"],
     demo: "https://mamacare-triage.onrender.com/",
     source: "https://github.com/Devtec-3/MamaCare-Triage",
@@ -135,8 +135,8 @@ export const projects: Project[] = [
     title: "GlobalCoach AI",
     tagline: "AI career orchestration platform",
     description:
-      "Full-stack career-coaching platform with an asynchronous engine comparing user CVs against live market demand. Integrated Google Gemini 1.5 Flash for semantic job-matching and built a data-driven dashboard (TanStack Query, interactive charts) tracking application activity and skill readiness. React, Node/Express, PostgreSQL on Neon, Drizzle ORM.",
-    tags: ["React", "Node.js", "PostgreSQL", "Drizzle ORM", "Gemini LLM", "TanStack Query"],
+      "Full-stack career-coaching platform with an asynchronous engine comparing user CVs against live market demand. Integrated Google Gemini 1.5 Flash for semantic job-matching and built a data-driven dashboard tracking application activity and skill readiness. React, Node/Express, PostgreSQL on Neon, Drizzle ORM.",
+    tags: ["React", "Node.js", "PostgreSQL", "Drizzle ORM", "Gemini LLM"],
     source: "https://github.com/Devtec-3/GlobalCoachAI",
     featured: true,
     icon: "🧠",
@@ -198,6 +198,16 @@ export const projects: Project[] = [
     icon: "💅",
   },
   {
+    title: "Black Diamond Menu",
+    tagline: "Client project · digital restaurant menu",
+    description:
+      "A full-stack digital menu website for a restaurant, with a server API service and deployed frontend.",
+    tags: ["TypeScript", "Full-stack", "Client Work"],
+    demo: "https://black-diamond-menu-website-api-serv.vercel.app",
+    source: "https://github.com/Devtec-3/Black-Diamond-Menu-Website",
+    icon: "🍽️",
+  },
+  {
     title: "Fitness Web App",
     tagline: "Personal fitness tracker",
     description:
@@ -232,16 +242,6 @@ export const projects: Project[] = [
     tags: ["JavaScript", "HTML", "CSS"],
     source: "https://github.com/Devtec-3/resume-builder-using-vanilla-javascript",
     icon: "📝",
-  },
-  {
-    title: "Black Diamond Menu",
-    tagline: "Client project · digital restaurant menu",
-    description:
-      "A full-stack digital menu website for a restaurant, with a server API service and deployed frontend.",
-    tags: ["TypeScript", "Full-stack", "Client Work"],
-    demo: "https://black-diamond-menu-website-api-serv.vercel.app",
-    source: "https://github.com/Devtec-3/Black-Diamond-Menu-Website",
-    icon: "🍽️",
   },
 ];
 
@@ -349,10 +349,15 @@ export const achievements = [
   "🔬 Live ML research dashboard deployed — 95% recall defect prediction model",
 ];
 
+export const stats = [
+  { value: "4.01/5.00", label: "CGPA — Second Class Upper" },
+  { value: "Top 10", label: "Global AI Hackathon Finalist" },
+  { value: "3", label: "Countries — NG · UK · AU" },
+  { value: "74+", label: "Public GitHub Repos" },
+];
+
 export const testimonials = [
   // ✏️ PASTE YOUR REAL LINKEDIN RECOMMENDATIONS HERE
-  // Copy the recommendation text + the person's name and title from:
-  // LinkedIn → your profile → Recommendations → Received
   {
     quote:
       "Paste your first LinkedIn recommendation here — ideally one from a supervisor, lecturer or hackathon teammate that speaks to your engineering skill and work ethic.",

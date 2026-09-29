@@ -6,69 +6,114 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #0a0e1a;
-}
-::-webkit-scrollbar-thumb {
-  background: #1f2937;
-  border-radius: 8px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
-}
-
 body {
-  @apply bg-ink text-slate-200 antialiased;
+  @apply bg-paper text-ink font-body antialiased;
 }
 
 ::selection {
-  @apply bg-accent/30 text-white;
+  @apply bg-marker/50 text-espresso;
 }
 
-/* subtle grid backdrop */
-.grid-bg {
-  background-image:
-    linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
-  background-size: 44px 44px;
-}
-
-.glow {
-  background: radial-gradient(
-    600px circle at 50% 0%,
-    rgba(56, 189, 248, 0.12),
-    transparent 70%
+/* ruled notebook lines */
+.ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 35px,
+    rgba(124, 45, 18, 0.10) 36px
   );
 }
 
-.card {
-  @apply rounded-2xl border border-line bg-panel/60 backdrop-blur transition;
+/* faint grid */
+.paper-grid {
+  background-image:
+    linear-gradient(to right, rgba(124, 45, 18, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 45, 18, 0.05) 1px, transparent 1px);
+  background-size: 36px 36px;
 }
 
-.card:hover {
-  @apply border-accent/40;
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.08);
+/* dark espresso torn-edge band */
+.espresso-band {
+  @apply relative bg-espresso text-paper;
+}
+.espresso-band::before,
+.espresso-band::after {
+  content: "";
+  @apply absolute -left-2 -right-2 h-3 bg-paper;
+  clip-path: polygon(0 0, 100% 12%, 92% 0, 85% 100%, 78% 8%, 70% 100%, 62% 4%, 54% 96%, 47% 0, 39% 92%, 31% 6%, 23% 100%, 15% 10%, 8% 94%, 0 0);
+}
+
+/* cards as paper scraps */
+.scrap {
+  @apply rounded-lg border border-espresso/15 bg-white/70 shadow-[0_2px_10px_rgba(59,35,26,0.08)] transition;
+}
+.scrap:hover {
+  transform: translateY(-3px) rotate(-0.5deg);
+  box-shadow: 0 10px 28px rgba(59, 35, 26, 0.15);
+}
+
+/* washi tape strip */
+.tape {
+  @apply absolute h-6 w-24 bg-marker/40 shadow-sm;
+  clip-path: polygon(2% 0, 98% 4%, 100% 96%, 0 100%);
+  backdrop-filter: blur(1px);
+}
+
+/* sticky note */
+.sticky {
+  @apply relative rounded-sm bg-[#f9e79f] p-5 shadow-[0_6px_18px_rgba(59,35,26,0.18)] transition;
+}
+.sticky:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* polaroid frame */
+.polaroid {
+  @apply relative bg-white p-3 pb-10 shadow-[0_8px_24px_rgba(59,35,26,0.25)];
+}
+
+/* section label with marker swipe */
+.marked {
+  @apply font-hand font-bold text-rust;
+  background: linear-gradient(104deg, transparent 0%, rgba(232, 185, 60, 0.45) 4%, rgba(232, 185, 60, 0.45) 94%, transparent 100%);
+  background-size: 100% 46%;
+  background-position: 0 78%;
+  background-repeat: no-repeat;
+  padding: 0 0.35rem;
+}
+
+/* torn name badge */
+.badge-torn {
+  clip-path: polygon(3% 8%, 12% 0, 30% 6%, 52% 0, 74% 7%, 92% 2%, 100% 22%, 96% 55%, 100% 82%, 88% 100%, 65% 94%, 40% 100%, 16% 93%, 0 100%, 4% 60%, 0 28%);
+}
+
+/* hand underline */
+.hand-underline {
+  @apply relative inline-block;
+}
+.hand-underline::after {
+  content: "";
+  @apply absolute -bottom-2 left-0 right-0 h-[6px];
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5 Q 30 1 60 4 T 118 3' stroke='%23e8b93c' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
 }
 
 .section-pad {
   @apply mx-auto w-full max-w-6xl px-5 py-20 md:px-8;
 }
 
-.gradient-text {
-  @apply bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent;
+.btn-espresso {
+  @apply inline-flex items-center gap-2 rounded-full bg-espresso px-7 py-3 font-body text-sm font-bold tracking-wide text-paper shadow-md transition hover:-translate-y-0.5 hover:bg-rust;
 }
 
-.btn-primary {
-  @apply inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 font-semibold text-ink transition hover:bg-sky-300;
-}
-
-.btn-ghost {
-  @apply inline-flex items-center gap-2 rounded-xl border border-line px-6 py-3 font-semibold text-slate-200 transition hover:border-accent/50 hover:text-accent;
+.btn-outline {
+  @apply inline-flex items-center gap-2 rounded-full border-2 border-espresso/70 px-7 py-3 font-body text-sm font-bold tracking-wide text-espresso transition hover:-translate-y-0.5 hover:bg-espresso hover:text-paper;
 }
 
 .chip {
-  @apply rounded-full border border-line bg-panel px-3 py-1 text-xs font-medium text-slate-300;
+  @apply rounded-full border border-espresso/20 bg-paperdark px-3 py-1 text-xs font-semibold text-espresso;
+}
+
+/* dashed connector for project list */
+.dashed-line {
+  @apply border-l-2 border-dashed border-espresso/25;
 }

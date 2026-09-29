@@ -4,20 +4,25 @@ import { projects, type Project } from "@/lib/data";
 function ProjectCard({ p, large = false }: { p: Project; large?: boolean }) {
   return (
     <div
-      className={`card group flex flex-col p-6 ${
+      className={`scrap relative flex flex-col p-6 ${
         large ? "md:col-span-2 md:flex-row md:items-center md:gap-8" : ""
       }`}
     >
+      <div className="tape -top-3 left-8 -rotate-2" />
       <div className="flex-1">
         <div className="mb-2 flex items-center justify-between">
           <span className="text-3xl">{p.icon}</span>
           {p.featured && (
-            <span className="chip border-accent/40 text-accent">★ Featured</span>
+            <span className="font-hand text-lg font-bold text-rust">
+              ★ favourite
+            </span>
           )}
         </div>
-        <h3 className="text-lg font-bold text-white">{p.title}</h3>
-        <p className="mb-3 text-sm font-medium text-accent">{p.tagline}</p>
-        <p className="text-sm leading-relaxed text-slate-400">{p.description}</p>
+        <h3 className="font-serif2 text-lg font-extrabold text-espresso">
+          {p.title}
+        </h3>
+        <p className="mb-3 font-hand text-lg font-bold text-rust">{p.tagline}</p>
+        <p className="text-sm leading-relaxed text-espresso/75">{p.description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {p.tags.map((t) => (
             <span key={t} className="chip">
@@ -27,25 +32,15 @@ function ProjectCard({ p, large = false }: { p: Project; large?: boolean }) {
         </div>
       </div>
 
-      <div className="mt-5 flex gap-4 text-sm font-semibold md:mt-0 md:flex-col md:gap-3">
+      <div className="mt-5 flex gap-4 font-hand text-xl font-bold md:mt-0 md:flex-col md:gap-2">
         {p.demo && (
-          <a
-            href={p.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="text-accent transition hover:text-sky-300"
-          >
-            Live Demo ↗
+          <a href={p.demo} target="_blank" rel="noreferrer" className="text-rust transition hover:opacity-70">
+            live demo ↗
           </a>
         )}
         {p.source && (
-          <a
-            href={p.source}
-            target="_blank"
-            rel="noreferrer"
-            className="text-slate-400 transition hover:text-accent"
-          >
-            Source Code ↗
+          <a href={p.source} target="_blank" rel="noreferrer" className="text-espresso/70 transition hover:text-rust">
+            code ↗
           </a>
         )}
       </div>
@@ -58,16 +53,17 @@ export default function Projects() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="section-pad">
-      <h2 className="mb-3 text-3xl font-bold md:text-4xl">
-        Featured <span className="gradient-text">Projects</span>
+    <section id="projects" className="ruled section-pad">
+      <p className="marked font-hand text-2xl">Selected Work</p>
+      <h2 className="mt-2 font-serif2 text-3xl font-extrabold text-espresso md:text-5xl">
+        Projects I&apos;m proud of
       </h2>
-      <p className="mb-10 max-w-2xl text-slate-400">
-        A selection of the work I&apos;m most proud of — AI products with real-world
-        impact, plus client deliveries.
+      <p className="mt-3 max-w-2xl text-sm font-semibold text-espresso/70">
+        Including my final year project — AI with real-world impact, plus
+        client deliveries.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-8 md:grid-cols-2">
         {featured.map((p, i) => (
           <Reveal key={p.title} delay={i * 80}>
             <ProjectCard p={p} large />
@@ -75,10 +71,15 @@ export default function Projects() {
         ))}
       </div>
 
-      <h3 className="mb-6 mt-14 text-xl font-semibold text-white">
-        Other Notable Work
-      </h3>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-16 flex items-center gap-4">
+        <h3 className="font-serif2 text-2xl font-extrabold text-espresso">
+          More projects
+        </h3>
+        <span className="font-hand text-lg font-bold text-rust">
+          other things I&apos;ve built →
+        </span>
+      </div>
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {others.map((p, i) => (
           <Reveal key={p.title} delay={i * 60}>
             <ProjectCard p={p} />
@@ -86,12 +87,12 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="mt-10 text-center">
+      <div className="mt-12 text-center">
         <a
           href="https://github.com/Devtec-3?tab=repositories"
           target="_blank"
           rel="noreferrer"
-          className="btn-ghost"
+          className="btn-outline"
         >
           See all 74+ repos on GitHub →
         </a>

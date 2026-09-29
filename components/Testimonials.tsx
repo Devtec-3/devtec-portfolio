@@ -3,27 +3,30 @@ import { testimonials } from "@/lib/data";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section-pad">
-      <h2 className="mb-3 text-3xl font-bold md:text-4xl">
-        What People <span className="gradient-text">Say About Me</span>
+    <section id="testimonials" className="ruled section-pad">
+      <p className="marked font-hand text-2xl">Kind Words</p>
+      <h2 className="mt-2 font-serif2 text-3xl font-extrabold text-espresso md:text-5xl">
+        What people say about me
       </h2>
-      <p className="mb-10 max-w-2xl text-slate-400">
-        Recommendations from supervisors, mentors and collaborators.
-      </p>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="mt-12 grid gap-8 md:grid-cols-3">
         {testimonials.map((t, i) => (
           <Reveal key={t.name} delay={i * 100}>
-            <figure className="card flex h-full flex-col p-6">
-              <span className="gradient-text text-5xl font-serif leading-none">
+            <figure
+              className={`scrap relative h-full p-6 ${
+                i % 2 ? "rotate-1" : "-rotate-1"
+              }`}
+            >
+              <div className="tape -top-3 left-1/2 -translate-x-1/2" />
+              <span className="font-serif2 text-5xl leading-none text-marker">
                 &ldquo;
               </span>
-              <blockquote className="mt-2 flex-1 text-sm leading-relaxed text-slate-300">
+              <blockquote className="mt-1 text-sm leading-relaxed text-espresso/80">
                 {t.quote}
               </blockquote>
-              <figcaption className="mt-5 border-t border-line pt-4">
-                <p className="font-semibold text-white">{t.name}</p>
-                <p className="text-xs text-slate-400">{t.title}</p>
+              <figcaption className="mt-5 border-t border-dashed border-espresso/20 pt-4">
+                <p className="font-hand text-xl font-bold text-espresso">{t.name}</p>
+                <p className="text-xs font-bold text-espresso/60">{t.title}</p>
               </figcaption>
             </figure>
           </Reveal>

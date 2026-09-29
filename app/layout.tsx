@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Muhammad Abdulwadud Ayinde — Frontend Engineer",
+  title: "Muhammad Abdulwadud Ayinde — Software Engineer & ML Researcher",
   description:
-    "Software Engineer & Machine Learning Researcher from Ilorin, Nigeria. B.Sc. Computer Science (CGPA 4.01/5.00) · Interpretable ML research · AI products for agriculture, health & careers · Internships across Nigeria, UK & Australia.",
+    "I started coding on a phone in Ilorin, Nigeria. Today I build AI products for agriculture, health and careers — and research interpretable machine learning. B.Sc. Computer Science, CGPA 4.01/5.00.",
   keywords: [
     "Muhammad Abdulwadud Ayinde",
     "Devtec",
-    "Frontend Engineer",
-    "React Developer Nigeria",
+    "Software Engineer",
+    "Machine Learning Researcher",
     "Portfolio",
   ],
 };
@@ -21,6 +21,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Caveat:wght@500;700&family=Nunito:wght@400;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

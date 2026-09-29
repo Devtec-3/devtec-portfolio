@@ -1,60 +1,78 @@
+import Reveal from "./Reveal";
 import { experience, leadership, certifications } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-pad">
-      <h2 className="mb-10 text-3xl font-bold md:text-4xl">
-        Industry <span className="gradient-text">Experience</span>
+    <section id="experience" className="paper-grid section-pad">
+      <p className="marked font-hand text-2xl">The Journey</p>
+      <h2 className="mt-2 font-serif2 text-3xl font-extrabold text-espresso md:text-5xl">
+        Where I&apos;ve worked
       </h2>
 
-      <div className="grid gap-12 md:grid-cols-[3fr_2fr]">
+      <div className="mt-12 grid gap-14 md:grid-cols-[3fr_2fr]">
         {/* Timeline */}
         <div className="space-y-10">
-          {experience.map((e) => (
-            <div key={e.role} className="relative border-l-2 border-line pl-6">
-              <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-accent bg-ink" />
-              <p className="text-xs font-semibold uppercase tracking-wide text-accent">
-                {e.period}
-              </p>
-              <h3 className="mt-1 text-lg font-bold text-white">{e.role}</h3>
-              <p className="text-sm text-slate-400">{e.org}</p>
-              <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                {e.points.map((pt) => (
-                  <li key={pt} className="flex gap-2">
-                    <span className="text-accent">▹</span>
-                    {pt}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {experience.map((e, i) => (
+            <Reveal key={e.role} delay={i * 60}>
+              <div className="relative border-l-2 border-dashed border-espresso/30 pl-6">
+                <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-rust bg-paper" />
+                <p className="font-hand text-lg font-bold text-rust">{e.period}</p>
+                <h3 className="mt-1 font-serif2 text-lg font-extrabold text-espresso md:text-xl">
+                  {e.role}
+                </h3>
+                <p className="text-xs font-bold text-espresso/60">{e.org}</p>
+                <ul className="mt-3 space-y-2 text-sm text-espresso/80">
+                  {e.points.map((pt) => (
+                    <li key={pt} className="flex gap-2">
+                      <span className="text-rust">▹</span>
+                      {pt}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           ))}
         </div>
 
-        {/* Leadership & Certifications */}
-        <div className="space-y-6">
-          <div className="card h-fit p-6">
-            <h3 className="mb-4 font-semibold text-white">Leadership & Community</h3>
-            <ul className="space-y-3">
-              {leadership.map((l) => (
-                <li key={l} className="flex items-start gap-3 text-sm text-slate-300">
-                  <span className="mt-0.5 text-accent">★</span>
-                  {l}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="card h-fit p-6">
-            <h3 className="mb-4 font-semibold text-white">Certifications</h3>
-            <ul className="space-y-3">
-              {certifications.map((c) => (
-                <li key={c} className="flex items-start gap-3 text-sm text-slate-300">
-                  <span className="mt-0.5">📜</span>
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Leadership & certs as sticky notes */}
+        <div className="space-y-8">
+          <Reveal delay={100}>
+            <div className="sticky -rotate-1 bg-[#f9e79f]">
+              <p className="font-serif2 text-base font-extrabold text-espresso">
+                ⭐ Leadership &amp; Community
+              </p>
+              <ul className="mt-3 space-y-2.5 text-xs font-bold text-espresso/80">
+                {leadership.map((l) => (
+                  <li key={l}>★ {l}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="sticky rotate-1 bg-[#d5e8d4]">
+              <p className="font-serif2 text-base font-extrabold text-espresso">
+                📜 Certifications
+              </p>
+              <ul className="mt-3 space-y-2.5 text-xs font-bold text-espresso/80">
+                {certifications.map((c) => (
+                  <li key={c}>✦ {c}</li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="scrap p-5">
+              <p className="font-serif2 text-base font-extrabold text-espresso">
+                🏆 Highlights
+              </p>
+              <ul className="mt-3 space-y-2.5 text-xs font-bold text-espresso/75">
+                <li>Top 10 Global Finalist — Aspire × Cayu AI Hackathon</li>
+                <li>CGPA 4.01/5.00 — Second Class Upper</li>
+                <li>3-country engineering experience</li>
+                <li>Live ML research dashboard deployed</li>
+              </ul>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

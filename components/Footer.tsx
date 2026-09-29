@@ -2,12 +2,15 @@ import { profile } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line py-8 text-center text-sm text-slate-500">
-      <p>
-        © {new Date().getFullYear()} {profile.name} · Built with Next.js &amp; Tailwind CSS
+    <footer className="py-10 text-center">
+      <p className="font-hand text-2xl font-bold text-espresso">
+        Build. Document. Grow. ✍️
       </p>
-      <p className="mt-1">
-        Designed &amp; engineered by <span className="gradient-text font-semibold">{profile.alias}</span>
+      <p className="mt-2 text-xs font-bold text-espresso/60">
+        © {new Date().getFullYear()} {profile.name} · Designed &amp; engineered by {profile.alias}
+      </p>
+      <p className="mt-1 text-xs font-semibold text-espresso/40">
+        Started on a phone with TrebEdit · Built with Next.js &amp; Tailwind
       </p>
     </footer>
   );

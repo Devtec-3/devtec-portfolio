@@ -9,28 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0a0e1a",
-        panel: "#111827",
-        line: "#1f2937",
-        accent: "#38bdf8",
-        accent2: "#a78bfa",
+        paper: "#faf7e1",
+        paperdark: "#f4efc9",
+        ink: "#1c1917",
+        espressopan: "#4a2c22",
+        espresso: "#3b231a",
+        marker: "#e8b93c",
+        rust: "#7c2d12",
+        olive: "#8a8f5c",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        serif2: ['"Playfair Display"', "Georgia", "serif"],
+        hand: ['"Caveat"', "cursive"],
+        body: ['"Nunito"', "system-ui", "sans-serif"],
       },
       animation: {
         "fade-up": "fade-up 0.7s ease-out both",
-        float: "float 6s ease-in-out infinite",
-        "spin-slow": "spin 12s linear infinite",
+        wiggle: "wiggle 4s ease-in-out infinite",
+        "spin-slow": "spin 14s linear infinite",
       },
       keyframes: {
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-12px)" },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-2deg)" },
+          "50%": { transform: "rotate(2deg)" },
         },
       },
     },
