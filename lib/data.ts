@@ -9,11 +9,11 @@ export const profile = {
   location: "Ilorin, Kwara State, Nigeria",
   email: "muhammadabdulwadudalata@gmail.com",
   phone: "+234 811 284 0602",
-  avatar: "/me.jpg",
+  avatar: "/wa.png",
   resumeUrl: "/resume.pdf",
   bio: "I'm a software engineer and machine learning researcher from Ilorin, Nigeria. I build AI products that solve real problems — an offline-capable maternal health triage assistant, a crop disease detector for farmers, and interpretable ML research in software defect prediction. I've completed engineering internships across Nigeria, the UK, and Australia.",
   highlights: [
-    "B.Sc. Computer Science, KWASU — CGPA 4.01/5.00 (Second Class Upper)",
+    "B.Sc. Computer Science, KWASU (Second Class Upper)",
     "Top 10 Global Finalist — Aspire × Cayu Global AI Hackathon",
     "Research: interpretable ML & software defect prediction",
     "Engineering internships across Nigeria, UK & Australia",
@@ -39,7 +39,7 @@ export const about = {
     {
       title: "B.Sc. Computer Science — Second Class Upper",
       org: "Kwara State University (KWASU), Malete, Nigeria",
-      period: "Sep 2022 – Jul 2026 · CGPA 4.01/5.00",
+      period: "Sep 2022 – Jul 2026",
     },
     {
       title: "Relevant Coursework",
@@ -350,31 +350,24 @@ export const achievements = [
 ];
 
 export const stats = [
-  { value: "4.01/5.00", label: "CGPA — Second Class Upper" },
-  { value: "Top 10", label: "Global AI Hackathon Finalist" },
-  { value: "3", label: "Countries — NG · UK · AU" },
   { value: "74+", label: "Public GitHub Repos" },
+  { value: "Top 10", label: "Global AI Hackathon Finalist" },
+  { value: "4", label: "Engineering roles across 3 countries" },
+  { value: "16+", label: "Projects shipped — AI, web & clients" },
 ];
 
 export const testimonials = [
-  // ✏️ PASTE YOUR REAL LINKEDIN RECOMMENDATIONS HERE
   {
     quote:
-      "Paste your first LinkedIn recommendation here — ideally one from a supervisor, lecturer or hackathon teammate that speaks to your engineering skill and work ethic.",
-    name: "Recommendation 1",
-    title: "e.g. Project Supervisor · KWASU",
+      "I am pleased to recommend Muhammad for his outstanding capabilities across full-stack development. He demonstrates strong proficiency in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and AngularJS, consistently delivering interfaces that are clean, accessible, and responsive. His disciplined use of Git and GitHub ensures structured collaboration and reliable version control. On the backend, his expertise in .NET, Java, and PHP enables him to build secure, scalable, and well-architected systems that align with modern engineering standards. Muhammad approaches every task with professionalism, technical depth, and a commitment to quality. He would be a valuable asset to any engineering team.",
+    name: "Shayan Bhutto",
+    title: "Co-Founder & AI Product Engineer @ Leaveit2AI",
   },
   {
     quote:
-      "Paste your second LinkedIn recommendation here — one from an internship mentor or client works great for credibility.",
-    name: "Recommendation 2",
-    title: "e.g. Mentor · BitsPro Consulting",
-  },
-  {
-    quote:
-      "Paste a third recommendation here — two or three strong ones are better than five weak ones.",
-    name: "Recommendation 3",
-    title: "e.g. Hackathon Teammate · Aspire × Cayu",
+      "I am pleased to recommend Muhammad for his outstanding capabilities across full-stack development. He demonstrates strong proficiency in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and AngularJS, consistently delivering interfaces that are clean, accessible, and responsive. His disciplined use of Git and GitHub ensures structured collaboration and reliable version control. Muhammad approaches every task with professionalism, technical depth, and a commitment to quality. He would be a valuable asset to any engineering team.",
+    name: "Rashid Sultan",
+    title: "Amal Ambassador & Fellow · Digital Marketing Graduate",
   },
 ];
 

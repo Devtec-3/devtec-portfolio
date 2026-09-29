@@ -67,9 +67,9 @@ export default function Experience() {
               </p>
               <ul className="mt-3 space-y-2.5 text-xs font-bold text-espresso/75">
                 <li>Top 10 Global Finalist — Aspire × Cayu AI Hackathon</li>
-                <li>CGPA 4.01/5.00 — Second Class Upper</li>
-                <li>3-country engineering experience</li>
+                <li>Engineering experience in Nigeria, UK &amp; Australia</li>
                 <li>Live ML research dashboard deployed</li>
+                <li>Kectil Youth Leadership Fellow · Aspire Leader</li>
               </ul>
             </div>
           </Reveal>

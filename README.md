@@ -31,9 +31,9 @@
 I'm a software engineer and machine learning researcher building AI products that solve
 real problems for real people — an offline-capable maternal health triage assistant, a
 multilingual crop disease detector for farmers, and interpretable ML research in software
-defect prediction.
+defect prediction. I started coding on a phone in Ilorin, Nigeria.
 
-- 🎓 **B.Sc. Computer Science**, Kwara State University — **CGPA 4.01/5.00** (Second Class Upper)
+- 🎓 **B.Sc. Computer Science**, Kwara State University (Second Class Upper)
 - 🏆 **Top 10 Global Finalist** — Aspire × Cayu Global AI Hackathon (Jan 2026)
 - 🌍 **Engineering experience in 3 countries** — Nigeria 🇳🇬 · UK 🇬🇧 · Australia 🇦🇺
 - 🔬 **Research:** Interpretable & uncertainty-aware ML, TabNet, digital health AI

@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Muhammad Abdulwadud Ayinde — Software Engineer & ML Researcher",
   description:
-    "I started coding on a phone in Ilorin, Nigeria. Today I build AI products for agriculture, health and careers — and research interpretable machine learning. B.Sc. Computer Science, CGPA 4.01/5.00.",
+    "I started coding on a phone in Ilorin, Nigeria. Today I build AI products for agriculture, health and careers — and research interpretable machine learning. B.Sc. Computer Science, Kwara State University.",
   keywords: [
     "Muhammad Abdulwadud Ayinde",
     "Devtec",

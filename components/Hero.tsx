@@ -40,13 +40,13 @@ export default function Hero() {
                 <Image
                   src={profile.avatar}
                   alt={profile.name}
-                  width={320}
-                  height={320}
+                  width={420}
+                  height={300}
                   priority
-                  className="h-56 w-56 object-cover md:h-64 md:w-64"
+                  className="h-52 w-72 object-cover object-top md:h-60 md:w-80"
                 />
                 <p className="absolute bottom-2 left-0 right-0 text-center font-hand text-lg text-espresso/80">
-                  me, coding on that phone →
+                  {profile.name.split(" ")[0]} · {profile.alias}
                 </p>
               </div>
               {/* small sticky note */}
