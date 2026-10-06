@@ -243,6 +243,60 @@ export const caseStudies: CaseStudy[] = [
       "Asynchronous-by-default changed the product feel: users never wait for AI. And type-safety end-to-end (Drizzle) is what let a solo dev ship a full-stack LLM product without drowning in runtime errors.",
   },
   {
+    slug: "cosmetic-beauty-salon",
+    projectKey: "Cosmetic Beauty Salon",
+    hero: "/projects/salon-mockup.png",
+    heroTilt: "rotate-2",
+    year: "2025",
+    role: "Freelance Developer — direct client",
+    timeframe: "~3 weeks",
+    status: "Live",
+    intro:
+      "A polished marketing website delivered for a real beauty salon client: a clean service showcase, a booking-oriented layout, and a design that matches the salon's brand — built with vanilla HTML, CSS and JavaScript for instant load times.",
+    problem: {
+      title: "A good salon with no front door on the internet",
+      body: "The salon depended entirely on walk-ins and word of mouth. New customers couldn't preview services or prices, and the owner had no single link to share when people asked \"do you have a website?\" Social media alone wasn't enough — it scattered the brand across posts with no clear home.",
+      bullets: [
+        "No online presence — customers couldn't discover services or prices beforehand",
+        "No shareable link for the business's brand and service menu",
+        "Competitors with simple websites were capturing the searches first",
+        "Budget-friendly: no ongoing hosting or CMS fees made sense for a small salon",
+      ],
+    },
+    whyThis: {
+      title: "A fast, brand-first brochure site — no heavy framework needed",
+      body: "For a small business whose needs are showcase + contact, a heavyweight SPA is the wrong tool. Vanilla HTML/CSS/JS on Vercel's free tier means the site loads instantly, costs the client ₦0 per month, and can be maintained by anyone — while still looking polished and on-brand.",
+      bullets: [
+        "Instant loads: no framework runtime — pure HTML, CSS and JavaScript",
+        "Brand-matched design: clean, beauty-focused visual language (cosmetic mockup identity)",
+        "Booking-oriented layout: services and contact are one tap away on every screen size",
+        "Zero running cost: free Vercel hosting with custom-domain readiness",
+      ],
+    },
+    howItWorks: [
+      { step: "Discover", detail: "Visitor lands on the hero — brand mockup, tagline, clear first impression" },
+      { step: "Browse services", detail: "Service showcase sections present offerings with prices and visuals" },
+      { step: "Get in touch", detail: "Booking-oriented contact paths take the customer from interest to message" },
+      { step: "Any device", detail: "Fully responsive layout — most salon customers arrive from mobile social links" },
+    ],
+    challenges: [
+      { challenge: "Translating a vague brief into a visual identity", fix: "Built a cosmetic brand mockup (Clean Fresh identity) and iterated with the client before writing code" },
+      { challenge: "Client needed to own the result", fix: "Vanilla stack with clean, commented code — no proprietary builder, no vendor lock-in" },
+      { challenge: "Keeping it beautiful AND fast", fix: "Optimised images and minimal dependencies — polish without a framework tax" },
+    ],
+    results: [
+      { value: "Live", label: "deployed on Vercel" },
+      { value: "₦0", label: "monthly hosting cost for the client" },
+      { value: "100%", label: "mobile responsive" },
+      { value: "1", label: "brand identity delivered with the site" },
+    ],
+    stack: ["HTML5", "CSS3", "JavaScript", "Vercel", "Brand Design"],
+    demo: "https://cosmetic-beauty-salon-web.vercel.app/",
+    source: "https://github.com/Devtec-3/Cosmetic-Beauty-Salon-Web",
+    lessons:
+      "Client work is a different skill from solo projects: the deliverable isn't code, it's the client's confidence. A brand mockup before development prevented a month of revisions.",
+  },
+  {
     slug: "careerpilot",
     projectKey: "CareerPilot — AI Career Assistant",
     hero: "/projects/careerpilot.jpg",

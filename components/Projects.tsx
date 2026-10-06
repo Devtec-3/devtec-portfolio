@@ -9,6 +9,7 @@ const studyByProject: Record<string, string> = {
   "Software Defect Prediction Dashboard": "software-defect-prediction",
   "GlobalCoach AI": "globalcoach",
   "CareerPilot — AI Career Assistant": "careerpilot",
+  "Cosmetic Beauty Salon": "cosmetic-beauty-salon",
 };
 
 function ProjectCard({ p, large = false }: { p: Project; large?: boolean }) {
